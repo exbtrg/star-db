@@ -1,0 +1,14 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.one {
+  width: 28rem;
+}
+
+.two {
+  width: 57rem;
+}

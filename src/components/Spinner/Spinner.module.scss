@@ -1,0 +1,26 @@
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+ 
+.spinner {
+  margin: 0 auto;
+  transition: opacity .1s eas
+}
+
+.spinner:before {
+  content: '';
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: var(--cyan);
+  border-bottom-color: var(--teal);
+  animation: spinner .8s ease infinite;
+}
+
+.visible {
+  opacity: 1;
+}
