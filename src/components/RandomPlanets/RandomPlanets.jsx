@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import SwapiService from '../../services/swapiService'
-import Info from '../Info'
+import Info from '../CardInfo'
 import Spinner from '../Spinner/'
 
 const RandomEntity = () => {

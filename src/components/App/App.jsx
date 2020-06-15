@@ -22,18 +22,17 @@ const App = () => {
 
         <RandomPlanets />
 
-        <Route path="/" exact component={FilmList} />
+        <Route path="/" component={FilmList} exact />
         <Route
           path="/:id"
-          exact
           render={({ match }) => {
             const id = match.params.id
             return <FilmDetail id={id} />
           }}
         />
-        <Route path="/people" component={PeoplePage} />
-        <Route path="/planets" component={PlanetsPage} />
-        <Route path="/starships" component={StarshipsPage} />
+        {/* <Route path="/people" component={PeoplePage} /> */}
+        {/* <Route path="/planets" component={PlanetsPage} /> */}
+        {/* <Route path="/starships" component={StarshipsPage} /> */}
 
       </Router>
     </main>
