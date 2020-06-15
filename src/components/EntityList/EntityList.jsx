@@ -1,12 +1,10 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import cn from 'classnames'
 // import { func } from 'prop-types'
 import styles from './EntityList.module.scss'
-import { ChangeIdContext } from '../LayoutPage/context'
 import { withRouter } from 'react-router-dom'
 
 const EntityList = ({ data, history }) => {
-  // const { onChangeCurrentId, currentId } = useContext(ChangeIdContext)
   const changeCurrentId = (id) => {
     const path = `${id}`
 

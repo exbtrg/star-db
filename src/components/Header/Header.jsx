@@ -10,7 +10,7 @@ const navList = [
 
 const Header = () => (
   <header className={styles.header}>
-    <Link className={styles.logo} to="/"><h1>The Star Wars</h1></Link>
+    <Link className={styles.logo} to="/films/"><h1>The Star Wars</h1></Link>
 
     <nav className={styles.nav}>
       {navList.map(({ label, to }) => (

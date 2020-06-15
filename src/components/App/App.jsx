@@ -1,18 +1,18 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './App.module.scss'
 import Header from '../Header'
 import RandomPlanets from '../RandomPlanets'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { FilmList, FilmDetail } from '../specificEntities'
-
 import {
-  // FilmPage,
-  PeoplePage,
-  PlanetsPage,
-  StarshipsPage
-} from '../pages'
-
+  FilmList,
+  PersonList,
+  PlanetList,
+  StarshipList,
+  FilmDetail,
+  PersonDetail,
+  PlanetDetail,
+  StarshipDetail
+} from '../specificEntities'
 
 const App = () => {
   return (
@@ -22,30 +22,44 @@ const App = () => {
 
         <RandomPlanets />
 
-        <Route path="/" component={FilmList} exact />
+        <Route path="/films" component={FilmList} exact />
         <Route
-          path="/:id"
+          path="/films/:id"
           render={({ match }) => {
             const id = match.params.id
             return <FilmDetail id={id} />
           }}
         />
-        {/* <Route path="/people" component={PeoplePage} /> */}
-        {/* <Route path="/planets" component={PlanetsPage} /> */}
-        {/* <Route path="/starships" component={StarshipsPage} /> */}
 
+        <Route path="/people" component={PlanetList} exact />
+        <Route
+          path="/people/:id"
+          render={({ match }) => {
+            const id = match.params.id
+            return <PlanetDetail id={id} />
+          }}
+        />
+
+        <Route path="/planets" component={PersonList} exact />
+        <Route
+          path="/planets/:id"
+          render={({ match }) => {
+            const id = match.params.id
+            return <PersonDetail id={id} />
+          }}
+        />
+
+        <Route path="/starships" component={StarshipList} exact />
+        <Route
+          path="/starships/:id"
+          render={({ match }) => {
+            const id = match.params.id
+            return <StarshipDetail id={id} />
+          }}
+        />
       </Router>
     </main>
   )
-}
-
-App.propTypes = {
-  // PropTypes here
-  myProp: PropTypes.string
-}
-
-App.defaultProps = {
-  // defaultProps here
 }
 
 export default App
