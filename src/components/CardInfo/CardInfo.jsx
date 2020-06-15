@@ -5,9 +5,8 @@ import styles from './CardInfo.module.scss'
 import FeatureList from '../FeatureList'
 import fallBackImg from './404-error.svg'
 import Fade from '../Fade'
-import Card from '../Card'
 
-const CardInfo = ({ kind, getImage, id, name, features }) => {
+const CardInfo = ({ getImage, id, name, features }) => {
   const [imgUrl, setImgUrl] = useState(null)
   const [shouldVisible, setShouldVisible] = useState(false)
 
@@ -23,28 +22,23 @@ const CardInfo = ({ kind, getImage, id, name, features }) => {
 
   return (
     <Fade show={shouldVisible}>
-      <Card>
-        <img onError={onImgErr} className={cn(styles.image, [styles[kind]])} src={imgUrl} alt={name} />
+      <div className={cn('card', styles.container)}>
+        <img onError={onImgErr} className={styles.image} src={imgUrl} alt={name} />
 
         <div className={styles.text}>
           <h2 className={styles.title}>{name}</h2>
 
           <FeatureList featureList={features} />
         </div>
-      </Card>
+      </div>
     </Fade>
   )
 }
 
 CardInfo.propTypes = {
-  kind: string,
   imgUrl: string,
   name: string,
   features: array
-}
-
-CardInfo.defaultProps = {
-  kind: 'small'
 }
 
 export default CardInfo

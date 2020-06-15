@@ -92,7 +92,7 @@ export default class SwapiService {
 
     return ({
       id,
-      title: film.title,
+      name: film.title,
       features: [
         { key: 'Director', value: film.director },
         { key: 'Episode', value: film.episode_id },
@@ -122,13 +122,7 @@ export default class SwapiService {
 
     return ({
       id,
-      name: planet.name,
-      features: [
-        { key: 'Climate', value: planet.climate },
-        { key: 'Diameter', value: planet.diameter },
-        { key: 'Population', value: planet.population },
-        { key: 'Orbital Period', value: planet.orbital_period }
-      ]
+      ...planet
     })
   }
 

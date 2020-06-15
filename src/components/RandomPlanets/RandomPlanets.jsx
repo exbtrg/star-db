@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import SwapiService from '../../services/swapiService'
-import Info from '../CardInfo'
+import PlanetInfo from './PlanetInfo'
 import Spinner from '../Spinner/'
 
-const RandomEntity = () => {
+const RandomPlanets = () => {
   const { getPlanet, getPlanetImage } = new SwapiService()
 
   const [currentId, setCurrentId] = useState(2)
@@ -16,7 +16,7 @@ const RandomEntity = () => {
     setCurrentId(randomId)
   }
 
-  const getPlanetMemo = useCallback(getPlanet, [])
+  const getPlanetMemo = useCallback(getPlanet, [currentId])
 
   useEffect(() => {
 
@@ -40,9 +40,14 @@ const RandomEntity = () => {
 
   return (
     <>
-      {loading ? <Spinner error={error} loading={loading} /> : <Info kind="large" getImage={getPlanetImage} {...data} />}
+      {loading ? (
+        <Spinner error={error} loading={loading} />
+      ) : (
+          <PlanetInfo imageSrc={getPlanetImage(currentId)} {...data} />
+        )
+      }
     </>
   )
 }
 
-export default RandomEntity
+export default RandomPlanets

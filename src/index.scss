@@ -75,7 +75,18 @@ button {
   cursor: pointer;
 }
 
+img {
+  border-radius: 1rem;
+  object-fit: cover;
+  object-position: center;
+}
 
+.card {
+  display: flex;
+  padding: 3.2rem;
+  background-color: var(--gray);
+  border-radius: 1rem;
+}
 
 @keyframes fadeIn {
   0% {
