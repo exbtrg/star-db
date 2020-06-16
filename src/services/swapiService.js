@@ -17,13 +17,8 @@ export default class SwapiService {
     }))
   }
 
-
   getResource = async (url) => {
-    const res = await fetch(`${this._apiBase}${url}`, {
-      headers: {
-        'location': `${this._apiBase}${url}`
-      }
-    })
+    const res = await fetch(`${this._apiBase}${url}`)
     if (!res.ok) {
       throw new Error(`Could no fetch ${url}, status ${res.status}`)
     }
