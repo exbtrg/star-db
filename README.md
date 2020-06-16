@@ -1,3 +1,2 @@
-### Star DB treaning project
-
-#### gh-pages https://exbtrg.github.io/myCodeExampleFetchApi/
+# Star DB
+gh-pages: https://exbtrg.github.io/myCodeExampleFetchApi/
