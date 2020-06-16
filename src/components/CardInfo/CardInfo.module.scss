@@ -1,6 +1,7 @@
 @import '../../scss/variables/media-queries.scss';
 
 .container {
+  margin-top: 6rem;
   @include mq-to($handsWide-max) {
     flex-flow: column;
   }
@@ -20,4 +21,13 @@
 
 .title {
   margin-bottom: 2rem;
+}
+
+.button {
+  width: auto;
+  padding: .8rem;
+  margin-top: 4rem;
+  @include mq-hover() {
+    color: var(--primary);
+  }
 }

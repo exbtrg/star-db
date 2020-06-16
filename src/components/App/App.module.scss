@@ -1,9 +1,14 @@
 .wrapper {
   max-width: 96rem;
   margin: 0 auto;
-  padding: 0 1.6rem;
+  padding: 0 1.6rem 4rem 1.6rem;
 
   > div {
     margin-bottom: 4rem;
   }
+}
+
+.title {
+  text-align: center;
+  margin-top: 4rem;
 }

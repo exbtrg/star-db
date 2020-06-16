@@ -20,10 +20,18 @@ const App = () => {
       <Router>
         <Header />
 
-        <RandomPlanets />
-
         <Switch>
-          <Route path="/films" component={FilmList} exact />
+          <Route
+            path="/films"
+            render={() => (
+              <>
+                <h2 className={styles.title}>Films</h2>
+                <FilmList />
+              </>
+            )}
+            exact
+          />
+
           <Route
             path="/films/:id"
             render={({ match }) => {
@@ -32,25 +40,55 @@ const App = () => {
             }}
           />
 
-          <Route path="/people" component={PlanetList} exact />
           <Route
-            path="/people/:id"
-            render={({ match }) => {
-              const id = match.params.id
-              return <PlanetDetail id={id} />
-            }}
+            path="/people"
+            render={() => (
+              <>
+                <h2 className={styles.title}>People</h2>
+                <PersonList />
+              </>
+            )}
+            exact
           />
 
-          <Route path="/planets" component={PersonList} exact />
           <Route
-            path="/planets/:id"
+            path="/people/:id"
             render={({ match }) => {
               const id = match.params.id
               return <PersonDetail id={id} />
             }}
           />
 
-          <Route path="/starships" component={StarshipList} exact />
+          <Route
+            path="/planets"
+            render={() => (
+              <>
+                <h2 className={styles.title}>Planets</h2>
+                <PlanetList />
+              </>
+            )}
+            exact
+          />
+
+          <Route
+            path="/planets/:id"
+            render={({ match }) => {
+              const id = match.params.id
+              return <PlanetDetail id={id} />
+            }}
+          />
+
+          <Route
+            path="/starships"
+            render={() => (
+              <>
+                <h2 className={styles.title}>Starships</h2>
+                <StarshipList />
+              </>
+            )}
+            exact
+          />
+
           <Route
             path="/starships/:id"
             render={({ match }) => {
@@ -62,6 +100,8 @@ const App = () => {
           <Redirect to="/films/" />
         </Switch>
       </Router>
+
+      <RandomPlanets />
     </main>
   )
 }

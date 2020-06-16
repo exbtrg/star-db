@@ -122,7 +122,14 @@ export default class SwapiService {
 
     return ({
       id,
-      ...planet
+      ...planet,
+      name: planet.name,
+      features: [
+        { key: 'Climate', value: planet.climate },
+        { key: 'Diameter', value: planet.diameter },
+        { key: 'Population', value: planet.population },
+        { key: 'Orbital Period', value: planet.orbital_period }
+      ]
     })
   }
 

@@ -16,7 +16,7 @@ const RandomPlanets = () => {
     setCurrentId(randomId)
   }
 
-  const getPlanetMemo = useCallback(getPlanet, [currentId])
+  const getPlanetMemo = useCallback(getPlanet, [])
 
   useEffect(() => {
 
@@ -43,7 +43,9 @@ const RandomPlanets = () => {
       {loading ? (
         <Spinner error={error} loading={loading} />
       ) : (
-          <PlanetInfo imageSrc={getPlanetImage(currentId)} {...data} />
+          <>
+            <PlanetInfo imageSrc={getPlanetImage(currentId)} {...data} />
+          </>
         )
       }
     </>

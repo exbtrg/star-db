@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './PlanetInfo.module.scss'
 import cn from 'classnames'
+import ImgWrapper from '../../ImgWrapper'
 
 const PlanetInfo = ({
   imageSrc,
@@ -13,7 +14,11 @@ const PlanetInfo = ({
 
   return (
     <div className={cn(styles.container, 'card')}>
-      <img src={imageSrc} alt={name} className={styles.image} />
+      <h3 className={styles.mainTitle}>Random Planet</h3>
+      <div className={styles.image}>
+        <ImgWrapper imgUrl={imageSrc} alt={name} />
+      </div>
+
       <div className={styles.text}>
         <h2 className={styles.title}>{name}</h2>
         <p className={styles.description}>
