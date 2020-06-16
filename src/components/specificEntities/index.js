@@ -12,8 +12,6 @@ import {
   StarshipDetail
 } from './EntityDetails'
 
-import FilmPage from './FilmsPage'
-
 export {
   FilmList,
   PersonList,
@@ -22,6 +20,5 @@ export {
   FilmDetail,
   PersonDetail,
   PlanetDetail,
-  StarshipDetail,
-  FilmPage,
+  StarshipDetail
 }

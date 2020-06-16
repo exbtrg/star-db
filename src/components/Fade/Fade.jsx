@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react'
+import { bool, node } from 'prop-types'
 
 const Fade = ({ show, children }) => {
-  const [shouldRender, setRender] = useState(show);
+  const [shouldRender, setRender] = useState(show)
 
   useEffect(() => {
-    if (show) setRender(true);
-  }, [show]);
+    if (show) setRender(true)
+  }, [show])
 
   const onAnimationEnd = () => {
-    if (!show) setRender(false);
-  };
+    if (!show) setRender(false)
+  }
 
   return (
     shouldRender && (
@@ -20,7 +21,12 @@ const Fade = ({ show, children }) => {
         {children}
       </div>
     )
-  );
-};
+  )
+}
 
-export default Fade;
+Fade.propTypes = {
+  show: bool,
+  children: node
+}
+
+export default Fade

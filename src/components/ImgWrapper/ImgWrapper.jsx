@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import styles from './ImgWrapper.module.scss'
+import { string } from 'prop-types'
 import fallBackImg from './404-error.svg'
 
 const ImgWrapper = ({ imgUrl, alt }) => {
@@ -15,8 +15,13 @@ const ImgWrapper = ({ imgUrl, alt }) => {
   }
 
   return (
-    <img onError={onImgErr} className={styles.image} src={url} alt={alt} />
+    <img onError={onImgErr} src={url} alt={alt} />
   )
+}
+
+ImgWrapper.protoTypes = {
+  imgUrl: string,
+  alt: string
 }
 
 export default ImgWrapper

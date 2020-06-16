@@ -1,4 +1,5 @@
 import React from 'react'
+import { string } from 'prop-types'
 import styles from './PlanetInfo.module.scss'
 import cn from 'classnames'
 import ImgWrapper from '../../ImgWrapper'
@@ -31,6 +32,15 @@ const PlanetInfo = ({
 
     </div>
   )
+}
+
+PlanetInfo.propTypes = {
+  imageSrc: string,
+  name: string,
+  climate: string,
+  diameter: string,
+  orbital_period: string,
+  gravity: string
 }
 
 export default PlanetInfo

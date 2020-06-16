@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react'
 import SwapiService from '../../services/swapiService'
 import PlanetInfo from './PlanetInfo'
 import Spinner from '../Spinner/'
+import ErrorBoundry from '../ErrorBoundry'
 
 const RandomPlanets = () => {
   const { getPlanet, getPlanetImage } = new SwapiService()
@@ -42,7 +43,11 @@ const RandomPlanets = () => {
     return <Spinner error={error} />
   }
 
-  return <PlanetInfo imageSrc={getPlanetImage(currentId)} {...data} />
+  return (
+    <ErrorBoundry>
+      <PlanetInfo imageSrc={getPlanetImage(currentId)} {...data} />
+    </ErrorBoundry>
+  )
 }
 
 export default RandomPlanets
