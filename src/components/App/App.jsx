@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './App.module.scss'
 import Header from '../Header'
 import RandomPlanets from '../RandomPlanets'
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import {
   FilmList,
   PersonList,
