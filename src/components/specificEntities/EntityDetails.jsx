@@ -1,6 +1,5 @@
 import React from 'react'
 import SwapiService from '../../services/swapiService'
-import DataDetail from '../DataDetail'
 import CardInfo from '../CardInfo'
 
 const swapi = new SwapiService()
@@ -17,51 +16,19 @@ const {
 } = swapi
 
 const FilmDetail = ({ id }) => {
-  return (
-    <DataDetail
-      component={<CardInfo />}
-      id={id}
-      getData={getFilm}
-      getImage={getFilmsImage}
-      kind="small"
-    />
-  )
+  return <CardInfo getImage={getFilmsImage} getData={getFilm} id={id} />
 }
 
 const PersonDetail = ({ id }) => {
-  return (
-    <DataDetail
-      component={<CardInfo />}
-      id={id}
-      getData={getPerson}
-      getImage={getPersonImage}
-      kind="small"
-    />
-  )
+  return <CardInfo getImage={getPersonImage} getData={getPerson} id={id} />
 }
 
 const PlanetDetail = ({ id }) => {
-  return (
-    <DataDetail
-      component={<CardInfo />}
-      id={id}
-      getData={getPlanet}
-      getImage={getPlanetImage}
-      kind="small"
-    />
-  )
+  return <CardInfo getData={getPlanet} getImage={getPlanetImage} id={id} />
 }
 
 const StarshipDetail = ({ id }) => {
-  return (
-    <DataDetail
-      component={<CardInfo />}
-      id={id}
-      getData={getStarship}
-      getImage={getStarshipImage}
-      kind="small"
-    />
-  )
+  return <CardInfo getData={getStarship} getImage={getStarshipImage} id={id} />
 }
 
 export {

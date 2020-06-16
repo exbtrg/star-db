@@ -1,23 +1,18 @@
 import React from 'react'
 import style from './Spinner.module.scss'
-import cn from 'classnames'
 import SomeError from '../SomeError'
 
 const Spinner = ({ error, loading }) => {
 
+  if (error) {
+    return <SomeError />
+  }
+
   return (
-    <div className="card">
-      {
-        error ? (
-          <SomeError />
-        ) : (
-            <div
-              className={cn(style.spinner, { [style.visible]: loading })}
-              style={{ padding: '2.1rem 0' }}
-            />
-          )
-      }
-    </div>
+    <div
+      className={style.spinner}
+      style={{ padding: '2.1rem 0' }}
+    />
   )
 }
 

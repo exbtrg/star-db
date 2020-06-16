@@ -3,12 +3,15 @@ import { string, array } from 'prop-types'
 import cn from 'classnames'
 import { withRouter } from 'react-router-dom'
 import styles from './CardInfo.module.scss'
+import useRequest from '../../hooks/useRequest'
 import FeatureList from '../FeatureList'
 import Fade from '../Fade'
+import Spinner from '../Spinner'
 import ImgWrapper from '../ImgWrapper'
 
-const CardInfo = ({ getImage, id, name, features, history }) => {
+const CardInfo = ({ getData, getImage, id, history }) => {
   const [shouldVisible, setShouldVisible] = useState(false)
+  const { data, loading, error } = useRequest(getData, id)
 
   useEffect(() => {
     setShouldVisible(true)
@@ -20,20 +23,28 @@ const CardInfo = ({ getImage, id, name, features, history }) => {
     history.goBack()
   }
 
+  if (loading) {
+    return (
+      <div className={cn('card', styles.container)}>
+        <Spinner error={error} />
+      </div>
+    )
+  }
+
   return (
     <Fade show={shouldVisible}>
       <div className={cn('card', styles.container)}>
         <div className={styles.image}>
-          <ImgWrapper imgUrl={getImage(id)} alt={name} />
+          <ImgWrapper imgUrl={getImage(id)} alt={data.name} />
         </div>
 
         <div className={styles.text}>
-          <h2 className={styles.title}>{name}</h2>
+          <h2 className={styles.title}>{data.name}</h2>
 
-          <FeatureList featureList={features} />
-
-          <button className={styles.button} type="button" onClick={goBackPage}>&#8592; Go Back</button>
+          <FeatureList featureList={data.features} />
         </div>
+
+        <button className={styles.button} type="button" onClick={goBackPage}>&#8592; Go Back</button>
       </div>
     </Fade>
   )

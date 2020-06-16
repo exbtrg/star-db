@@ -1,5 +1,4 @@
 import React from 'react'
-import DataList from '../DataList'
 import SwapiService from '../../services/swapiService'
 import EntityList from '../EntityList'
 
@@ -13,40 +12,19 @@ const {
 } = swapi
 
 const FilmList = () => {
-  return (
-    <DataList
-      component={<EntityList />}
-      getData={getAllFilms}
-    />
-  )
+  return <EntityList getData={getAllFilms} />
 }
 
-
 const PersonList = () => {
-  return (
-    <DataList
-      component={<EntityList />}
-      getData={getAllPeople}
-    />
-  )
+  return <EntityList getData={getAllPeople} />
 }
 
 const PlanetList = () => {
-  return (
-    <DataList
-      component={<EntityList />}
-      getData={getAllPlanets}
-    />
-  )
+  return <EntityList getData={getAllPlanets} />
 }
 
 const StarshipList = () => {
-  return (
-    <DataList
-      component={<EntityList />}
-      getData={getAllStarships}
-    />
-  )
+  return <EntityList getData={getAllStarships} />
 }
 
 export {

@@ -1,4 +1,6 @@
 .list {
+  display: flex;
+  flex-flow: column;
   background-color: var(--gray);
   border-radius: 1rem;
   border: 1px solid var(--secondary);

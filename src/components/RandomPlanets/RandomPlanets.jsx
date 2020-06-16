@@ -38,18 +38,11 @@ const RandomPlanets = () => {
     return () => clearInterval(timer)
   }, [currentId, getPlanetMemo])
 
-  return (
-    <>
-      {loading ? (
-        <Spinner error={error} loading={loading} />
-      ) : (
-          <>
-            <PlanetInfo imageSrc={getPlanetImage(currentId)} {...data} />
-          </>
-        )
-      }
-    </>
-  )
+  if (loading) {
+    return <Spinner error={error} />
+  }
+
+  return <PlanetInfo imageSrc={getPlanetImage(currentId)} {...data} />
 }
 
 export default RandomPlanets

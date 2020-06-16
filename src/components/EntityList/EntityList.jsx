@@ -1,14 +1,25 @@
 import React from 'react'
 import cn from 'classnames'
-// import { func } from 'prop-types'
+import { func, object } from 'prop-types'
+import useRequest from '../../hooks/useRequest'
 import styles from './EntityList.module.scss'
 import { withRouter } from 'react-router-dom'
+import Spinner from '../Spinner'
 
-const EntityList = ({ data, history }) => {
+const EntityList = ({ getData, history }) => {
+  const { data, loading, error } = useRequest(getData)
+
   const changeCurrentId = (id) => {
     const path = `${id}`
-
     history.push(path)
+  }
+
+  if (loading) {
+    return (
+      <div className={styles.list}>
+        <Spinner error={error} />
+      </div>
+    )
   }
 
   return (
@@ -22,8 +33,9 @@ const EntityList = ({ data, history }) => {
   )
 }
 
-// EntityList.propTypes = {
-//   getData: func
-// }
+EntityList.propTypes = {
+  getData: func,
+  history: object
+}
 
 export default withRouter(EntityList)

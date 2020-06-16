@@ -30,4 +30,8 @@
   @include mq-hover() {
     color: var(--primary);
   }
+  @include mq-from($handsWide-min) {
+    align-self: flex-end;
+    margin-left: auto;
+  }
 }
