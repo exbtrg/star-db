@@ -1,2 +1,2 @@
 # Star DB
-gh-pages: https://exbtrg.github.io/myCodeExampleFetchApi/
+gh-pages: https://exbtrg.github.io/star-db/
