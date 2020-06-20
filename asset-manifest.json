@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/myCodeExampleFetchApi/static/css/main.dc0b8fd1.chunk.css",
-    "main.js": "/myCodeExampleFetchApi/static/js/main.36960175.chunk.js",
-    "main.js.map": "/myCodeExampleFetchApi/static/js/main.36960175.chunk.js.map",
-    "runtime-main.js": "/myCodeExampleFetchApi/static/js/runtime-main.dacb7cec.js",
-    "runtime-main.js.map": "/myCodeExampleFetchApi/static/js/runtime-main.dacb7cec.js.map",
-    "static/js/2.4bd70f0d.chunk.js": "/myCodeExampleFetchApi/static/js/2.4bd70f0d.chunk.js",
-    "static/js/2.4bd70f0d.chunk.js.map": "/myCodeExampleFetchApi/static/js/2.4bd70f0d.chunk.js.map",
-    "index.html": "/myCodeExampleFetchApi/index.html",
-    "precache-manifest.dc670066ddf9b675fc0757a64a30b1f5.js": "/myCodeExampleFetchApi/precache-manifest.dc670066ddf9b675fc0757a64a30b1f5.js",
-    "service-worker.js": "/myCodeExampleFetchApi/service-worker.js",
-    "static/css/main.dc0b8fd1.chunk.css.map": "/myCodeExampleFetchApi/static/css/main.dc0b8fd1.chunk.css.map",
-    "static/js/2.4bd70f0d.chunk.js.LICENSE.txt": "/myCodeExampleFetchApi/static/js/2.4bd70f0d.chunk.js.LICENSE.txt",
-    "static/media/404-error.svg": "/myCodeExampleFetchApi/static/media/404-error.9324e856.svg",
-    "static/media/death-star.23c4fd75.svg": "/myCodeExampleFetchApi/static/media/death-star.23c4fd75.svg"
+    "main.css": "/star-db/static/css/main.dc0b8fd1.chunk.css",
+    "main.js": "/star-db/static/js/main.36960175.chunk.js",
+    "main.js.map": "/star-db/static/js/main.36960175.chunk.js.map",
+    "runtime-main.js": "/star-db/static/js/runtime-main.d9f21290.js",
+    "runtime-main.js.map": "/star-db/static/js/runtime-main.d9f21290.js.map",
+    "static/js/2.4bd70f0d.chunk.js": "/star-db/static/js/2.4bd70f0d.chunk.js",
+    "static/js/2.4bd70f0d.chunk.js.map": "/star-db/static/js/2.4bd70f0d.chunk.js.map",
+    "index.html": "/star-db/index.html",
+    "precache-manifest.da0a0e60d88e99c4e71d31710a88e508.js": "/star-db/precache-manifest.da0a0e60d88e99c4e71d31710a88e508.js",
+    "service-worker.js": "/star-db/service-worker.js",
+    "static/css/main.dc0b8fd1.chunk.css.map": "/star-db/static/css/main.dc0b8fd1.chunk.css.map",
+    "static/js/2.4bd70f0d.chunk.js.LICENSE.txt": "/star-db/static/js/2.4bd70f0d.chunk.js.LICENSE.txt",
+    "static/media/404-error.svg": "/star-db/static/media/404-error.9324e856.svg",
+    "static/media/death-star.23c4fd75.svg": "/star-db/static/media/death-star.23c4fd75.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.dacb7cec.js",
+    "static/js/runtime-main.d9f21290.js",
     "static/js/2.4bd70f0d.chunk.js",
     "static/css/main.dc0b8fd1.chunk.css",
     "static/js/main.36960175.chunk.js"
